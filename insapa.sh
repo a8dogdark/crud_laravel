@@ -44,7 +44,7 @@ echo "* Instalamos Apache2 *"
 echo "***********************"
 echo " "
 sleep 3
-sudo apt install apache2
+sudo apt install apache2 -y
 sudo systemctl status apache2
 
 echo " "
@@ -64,6 +64,20 @@ echo " "
 sleep 3
 sudo apt install mysql-server -y
 sudo systemctl start mysql.service
+#sudo echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'mysecretpassword';"
+
+sudo /etc/init.d/apache2 stop
+sudo /etc/init.d/mysql stop
+
+echo " "
+echo "*************************"
+echo "* Instalamos phpmyadmin *"
+echo "*************************"
+echo " "
+sleep 3
+wget https://files.phpmyadmin.net/phpMyAdmin/5.2.1/phpMyAdmin-5.2.1-all-languages.zip
+unzip phpMyAdmin-5.2.1-all-languages.zip -d /var/html
+
 
 echo " "
 echo "*********************"
@@ -85,3 +99,36 @@ sleep 3
 composer global require laravel/installer --update-with-all-dependencies
 
 
+
+echo " "
+echo "*************************************"
+echo "* creamos el nuevo proyecto de crud *"
+echo "*************************************"
+echo " "
+sleep 3
+#laravel new crud
+sudo rm -R /var/html
+sudo mkdir /var/html
+sudo chmod 777 /var/html
+
+composer create-project laravel/laravel crud
+
+
+
+#echo "*********************************"
+#echo "* instalamos visual studio code *"
+#echo "*********************************"
+#sleep 3
+#sudo snap install --classic code
+
+#echo "***************************"
+#echo "* iniciamos los servicios *"
+#echo "***************************"
+#sleep 3
+
+sudo /etc/init.d/apache2 start
+sudo /etc/init.d/mysql start
+
+echo "FIN INSTALACION"
+echo "Ejecuta el siguiente comando sudo source ~/.bashrc"
+exit
