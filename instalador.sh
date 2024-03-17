@@ -1,5 +1,10 @@
 #!/bin/sh
 clear
+echo "agregamos php 8 al sistema"
+sleep 3
+sudo dpkg -l | grep php | tee packages.txt
+sudo add-apt-repository ppa:ondrej/php
+
 echo "actualizamos el sistema"
 sleep 3
 #actualizamos el sistema
@@ -8,7 +13,7 @@ sudo apt update -y
 echo "agregamos los paquetes requeridos"
 sleep 3
 #agregamos las dependencias requeridas
-sudo apt install curl php-cli php-mbstring git unzip wget -y
+sudo apt install curl php8.2-cli php8.2-mbstring git unzip wget -y
 
 echo "descargamos xampp"
 sleep 3
