@@ -206,6 +206,8 @@ echo "*********************************"
 sleep 3
 sudo snap install --classic code
 
+xdg-open http://crud.test
+
 echo "fin instalacion"
 
 exit
