@@ -57,6 +57,8 @@ echo "********************************"
 sleep 3
 #agregamos composer al path
 echo 'export PATH="~/.config/composer/vendor/bin:$PATH"' >> ~/.bashrc
+echo 'echo $PATH' >> ~/.bashrc
+
 
 echo "**********************"
 echo "* activamos composer *"
