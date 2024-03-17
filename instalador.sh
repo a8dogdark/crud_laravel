@@ -174,7 +174,7 @@ sleep 3
 
 sudo chmod 777 /opt/lampp/etc/httpd.conf
 
-sudo echo 'include etc/extra/httpd-vhost.conf' >> /opt/lampp/etc/httpd.conf
+sudo echo 'Include etc/extra/httpd-vhost.conf' >> /opt/lampp/etc/httpd.conf
 
 sudo chmod 644 /opt/lampp/etc/httpd.conf
 
@@ -187,7 +187,7 @@ sleep 3
 sudo chmod 777 /opt/lampp/etc/extra/httpd-vhosts.conf
 
 sudo echo '<VirtualHost *:80>' >> /opt/lampp/etc/extra/httpd-vhosts.conf
-sudo echo 'DocumentRoot "/opt/lampp/htdocs/laravel/crud/public"' >> /opt/lampp/etc/extra/httpd-vhosts.conf
+sudo echo 'DocumentRoot "/opt/lampp/htdocs/crud/public"' >> /opt/lampp/etc/extra/httpd-vhosts.conf
 sudo echo 'ServerName crud.test' >> /opt/lampp/etc/extra/httpd-vhosts.conf
 sudo echo 'ServerAlias www.crud.test' >> /opt/lampp/etc/extra/httpd-vhosts.conf
 sudo echo '</VirtualHost>' >> /opt/lampp/etc/extra/httpd-vhosts.conf
