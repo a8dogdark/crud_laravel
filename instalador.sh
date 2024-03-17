@@ -51,13 +51,17 @@ sleep 3
 # movemos composer
 sudo mv composer.phar /usr/local/bin/composer
 
+
 echo "********************************"
 echo "* agregamos composer al bashrc *"
 echo "********************************"
 sleep 3
+
 #agregamos composer al path
+echo "inicio" >> ~/.bashrc
 echo 'export PATH="~/.config/composer/vendor/bin:$PATH"' >> ~/.bashrc
 echo 'echo $PATH' >> ~/.bashrc
+echo "fin" >> ~/.bashrc
 
 
 echo "**********************"
