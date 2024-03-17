@@ -1,4 +1,4 @@
-#!/bin/bash -i
+#!/bin/bash
 clear
 
 cd ~/Descargas
@@ -62,7 +62,7 @@ echo "**********************"
 echo "* activamos composer *"
 echo "**********************"
 sleep 3
-sudo exec ~/.bashrc
+source ~/.bashrc
 
 echo "********************"
 echo "* instalamos xampp *"
@@ -147,7 +147,8 @@ echo "*************************************"
 echo "* creamos el nuevo proyecto de crud *"
 echo "*************************************"
 sleep 3
-laravel new crud
+#laravel new crud
+composer create-project laravel/laravel crud
 
 echo "*********************************************"
 echo "* cambiamos los permisos de la carpeta crud *"
