@@ -159,8 +159,11 @@ echo "*********************************************************"
 echo "* creamos el servidor virtual para el dominio crud.test *"
 echo "*********************************************************"
 sleep 3
+sudo chmod +x /etc/hosts
 
 sudo sed -i '1! 127.0.0.1  crud.test' >> /etc/hosts
+
+sudo chmod 644 /etc/hosts
 
 #activamos el uso de host virtuales en xampp
 echo "***********************************************"
@@ -173,11 +176,11 @@ echo "* ahora debemos dar de alta el nuevo dominio *"
 echo "**********************************************"
 sleep 3
 
-echo '<VirtualHost *:80>' >> /opt/lampp/etc/extra/httpd-vhosts.conf
-echo 'DocumentRoot "/opt/lampp/htdocs/laravel/crud/public"' >> /opt/lampp/etc/extra/httpd-vhosts.conf
-echo 'ServerName crud.test' >> /opt/lampp/etc/extra/httpd-vhosts.conf
-echo 'ServerAlias www.crud.test' >> /opt/lampp/etc/extra/httpd-vhosts.conf
-echo '</VirtualHost>' >> /opt/lampp/etc/extra/httpd-vhosts.conf
+sudo echo '<VirtualHost *:80>' >> /opt/lampp/etc/extra/httpd-vhosts.conf
+sudo echo 'DocumentRoot "/opt/lampp/htdocs/laravel/crud/public"' >> /opt/lampp/etc/extra/httpd-vhosts.conf
+sudo echo 'ServerName crud.test' >> /opt/lampp/etc/extra/httpd-vhosts.conf
+sudo echo 'ServerAlias www.crud.test' >> /opt/lampp/etc/extra/httpd-vhosts.conf
+sudo echo '</VirtualHost>' >> /opt/lampp/etc/extra/httpd-vhosts.conf
 
 echo "*******************************"
 echo "* iniciamos el servidor xampp *"
