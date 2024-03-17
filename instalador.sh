@@ -184,11 +184,15 @@ echo "* ahora debemos dar de alta el nuevo dominio *"
 echo "**********************************************"
 sleep 3
 
+chmod +x /opt/lampp/etc/extra/httpd-vhosts.conf
+
 sudo echo '<VirtualHost *:80>' >> /opt/lampp/etc/extra/httpd-vhosts.conf
 sudo echo 'DocumentRoot "/opt/lampp/htdocs/laravel/crud/public"' >> /opt/lampp/etc/extra/httpd-vhosts.conf
 sudo echo 'ServerName crud.test' >> /opt/lampp/etc/extra/httpd-vhosts.conf
 sudo echo 'ServerAlias www.crud.test' >> /opt/lampp/etc/extra/httpd-vhosts.conf
 sudo echo '</VirtualHost>' >> /opt/lampp/etc/extra/httpd-vhosts.conf
+
+chmod 644 /opt/lampp/etc/extra/httpd-vhosts.conf
 
 echo "*******************************"
 echo "* iniciamos el servidor xampp *"
