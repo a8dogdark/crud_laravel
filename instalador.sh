@@ -38,7 +38,7 @@ echo 'export PATH="~/.config/composer/vendor/bin:$PATH"' >> ~/.bashrc
 
 echo "activamos composer"
 sleep 3
-sudo source ~/.bashrc
+sudo -s source ~/.bashrc
 
 echo "instalamos xampp"
 sleep 3
