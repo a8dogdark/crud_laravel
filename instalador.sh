@@ -70,6 +70,12 @@ sleep 3
 #instalamos xampp
 sudo ./xampp-linux-x64-8.2.12-0-installer.run
 
+echo "*************************************"
+echo "* eliminamos el instalador de xampp *"
+echo "*************************************"
+sleep 3
+sudo rm xampp-linux-x64-8.2.12-0-installer.run
+
 echo "*******************"
 echo "* detenemos xampp *"
 echo "*******************"
@@ -83,6 +89,12 @@ echo "***************************************"
 sleep 3
 #creamos los enlaces simbolicos
 sudo ln -s /opt/lampp/bin/mysql /usr/bin
+
+echo "*********************************"
+echo "* instalamos visual studio code *"
+echo "*********************************"
+sleep 3
+sudo snap install --classic code
 
 echo "*********************"
 echo "* instalamos nodejs *"
@@ -138,10 +150,38 @@ laravel new crud
 echo "*********************************************"
 echo "* cambiamos los permisos de la carpeta crud *"
 echo "*********************************************"
-
+sleep 3
 sudo chmod 777 -R /opt/lampp/htdocs/crud
 
+echo "*********************************************************"
+echo "* creamos el servidor virtual para el dominio crud.test *"
+echo "*********************************************************"
+sleep 3
 
+sudo sed -i '1! 127.0.0.1  crud.test' >> /etc/hosts
+
+#activamos el uso de host virtuales en xampp
+echo "***********************************************"
+echo "* activamos el uso de host virtuales en xampp *"
+echo "***********************************************"
+sleep 3
+
+echo "**********************************************"
+echo "* ahora debemos dar de alta el nuevo dominio *"
+echo "**********************************************"
+sleep 3
+
+echo '<VirtualHost *:80>' >> /opt/lampp/etc/extra/httpd-vhosts.conf
+echo 'DocumentRoot "/opt/lampp/htdocs/laravel/crud/public"' >> /opt/lampp/etc/extra/httpd-vhosts.conf
+echo 'ServerName crud.test' >> /opt/lampp/etc/extra/httpd-vhosts.conf
+echo 'ServerAlias www.crud.test' >> /opt/lampp/etc/extra/httpd-vhosts.conf
+echo '</VirtualHost>' >> /opt/lampp/etc/extra/httpd-vhosts.conf
+
+echo "*******************************"
+echo "* iniciamos el servidor xampp *"
+echo "*******************************"
+sleep 3
+sudo /opt/lampp/lampp start
 
 
 echo "fin instalacion"
