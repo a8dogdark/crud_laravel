@@ -59,6 +59,7 @@ sleep 3
 echo 'export PATH="~/.config/composer/vendor/bin:$PATH"' >> ~/.bashrc
 echo 'echo $PATH' >> ~/.bashrc
 
+export PATH="~/.config/composer/vendor/bin:$PATH"
 echo $path
 
 
