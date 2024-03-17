@@ -200,11 +200,11 @@ echo "*******************************"
 sleep 3
 sudo /opt/lampp/lampp start
 
-#echo "*********************************"
-#echo "* instalamos visual studio code *"
-#echo "*********************************"
-#sleep 3
-#sudo snap install --classic code
+echo "*********************************"
+echo "* instalamos visual studio code *"
+echo "*********************************"
+sleep 3
+sudo snap install --classic code
 
 echo "fin instalacion"
 
