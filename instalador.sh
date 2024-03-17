@@ -86,7 +86,7 @@ sleep 3
 
 echo "fin instalacion"
 
-exit(0)
+exit
 #cambiamos los permisos de la carpeta htdocs de xampp
 sudo chmod 777 -R /opt/lampp/htdocs
 
