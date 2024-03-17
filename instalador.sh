@@ -20,7 +20,7 @@ echo "* agregamos los paquetes requeridos *"
 echo "*************************************"
 sleep 3
 #agregamos las dependencias requeridas
-sudo apt install curl php8.2-cli php8.2-mbstring git unzip wget -y
+sudo apt install curl php8.2 php8.2-cli php8.2-mbstring php8.2-xml php8.2-curl php8.2-dom git unzip wget -y
 
 echo "*********************"
 echo "* descargamos xampp *"
