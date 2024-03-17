@@ -83,12 +83,17 @@ sudo mkdir /opt/lampp/htdocs
 echo "cambiamos permisos de escritura a htdocs de xampp"
 sleep 3
 
-
-echo "fin instalacion"
-
-exit
 #cambiamos los permisos de la carpeta htdocs de xampp
 sudo chmod 777 -R /opt/lampp/htdocs
 
 #nos movemos a la carpeta htdocs
 cd /opt/lampp/htdocs
+
+#creamos el nuevo proyecto
+echo "creamos el nuevo proyecto de crud"
+laravel new crud
+
+
+echo "fin instalacion"
+
+exit
