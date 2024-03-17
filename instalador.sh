@@ -62,9 +62,7 @@ echo "**********************"
 echo "* activamos composer *"
 echo "**********************"
 sleep 3
-sudo chmod +x ~/.bashrc
-sudo -s source ~/.bashrc
-sudo chmod 644 ~/.bashrc
+sudo exec ~/.bashrc
 
 echo "********************"
 echo "* instalamos xampp *"
