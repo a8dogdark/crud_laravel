@@ -57,7 +57,6 @@ sudo /opt/lampp/lampp stop
 echo "creamos enlaces simbolicos de xampp"
 sleep 3
 #creamos los enlaces simbolicos
-sudo ln -s /opt/lampp/bin/php /usr/bin
 sudo ln -s /opt/lampp/bin/mysql /usr/bin
 
 echo "instalamos nodejs"
