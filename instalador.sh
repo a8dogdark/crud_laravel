@@ -86,11 +86,14 @@ sleep 3
 #cambiamos los permisos de la carpeta htdocs de xampp
 sudo chmod 777 -R /opt/lampp/htdocs
 
+echo "nos movemos a la carpeta a htdocs"
+sleep 3
 #nos movemos a la carpeta htdocs
 cd /opt/lampp/htdocs
 
 #creamos el nuevo proyecto
 echo "creamos el nuevo proyecto de crud"
+sleep 3
 laravel new crud
 
 echo " "
