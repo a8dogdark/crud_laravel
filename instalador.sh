@@ -62,7 +62,9 @@ echo "**********************"
 echo "* activamos composer *"
 echo "**********************"
 sleep 3
+sudo chmod +x ~/.bashrc
 sudo -s source ~/.bashrc
+sudo chmod 644 ~/.bashrc
 
 echo "********************"
 echo "* instalamos xampp *"
@@ -161,7 +163,7 @@ echo "*********************************************************"
 sleep 3
 sudo chmod +x /etc/hosts
 
-sudo sed -i '1! 127.0.0.1  crud.test' >> /etc/hosts
+sudo echo '127.0.0.1  crud.test' >> /etc/hosts
 
 sudo chmod 644 /etc/hosts
 
