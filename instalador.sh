@@ -93,6 +93,13 @@ cd /opt/lampp/htdocs
 echo "creamos el nuevo proyecto de crud"
 laravel new crud
 
+echo " "
+echo "cambiamos los permisos de la carpeta crud"
+echo " "
+
+sudo chmod 777 -R /opt/lampp/htdocs/crud
+
+
 
 echo "fin instalacion"
 
