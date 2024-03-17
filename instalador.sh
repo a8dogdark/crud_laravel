@@ -95,12 +95,6 @@ sleep 3
 #creamos los enlaces simbolicos
 sudo ln -s /opt/lampp/bin/mysql /usr/bin
 
-echo "*********************************"
-echo "* instalamos visual studio code *"
-echo "*********************************"
-sleep 3
-sudo snap install --classic code
-
 echo "*********************"
 echo "* instalamos nodejs *"
 echo "*********************"
@@ -164,7 +158,7 @@ echo "*********************************************************"
 echo "* creamos el servidor virtual para el dominio crud.test *"
 echo "*********************************************************"
 sleep 3
-sudo chmod +x /etc/hosts
+sudo chmod 777 /etc/hosts
 
 sudo echo '127.0.0.1  crud.test' >> /etc/hosts
 
@@ -188,7 +182,7 @@ echo "* ahora debemos dar de alta el nuevo dominio *"
 echo "**********************************************"
 sleep 3
 
-chmod +x /opt/lampp/etc/extra/httpd-vhosts.conf
+chmod 777 /opt/lampp/etc/extra/httpd-vhosts.conf
 
 sudo echo '<VirtualHost *:80>' >> /opt/lampp/etc/extra/httpd-vhosts.conf
 sudo echo 'DocumentRoot "/opt/lampp/htdocs/laravel/crud/public"' >> /opt/lampp/etc/extra/httpd-vhosts.conf
@@ -204,6 +198,11 @@ echo "*******************************"
 sleep 3
 sudo /opt/lampp/lampp start
 
+#echo "*********************************"
+#echo "* instalamos visual studio code *"
+#echo "*********************************"
+#sleep 3
+#sudo snap install --classic code
 
 echo "fin instalacion"
 
