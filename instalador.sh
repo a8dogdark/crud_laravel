@@ -1,11 +1,11 @@
 #!/bin/sh
 clear
-print "actualizamos el sistema\n"
+echo "actualizamos el sistema"
 sleep 1
 #actualizamos el sistema
 sudo apt update -y
 
-print "agregamos los paquetes requeridos\n"
+echo "agregamos los paquetes requeridos"
 sleep 1
 #agregamos las dependencias requeridas
 sudo apt install curl php-cli php-mbstring git unzip wget -y
