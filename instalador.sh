@@ -1,6 +1,7 @@
 #!/bin/sh
 clear
 
+cd ~/Descargas
 echo "******************************"
 echo "* agregamos php 8 al sistema *"
 echo "******************************"
@@ -109,7 +110,7 @@ echo "* agregamos instalador de laravel a composer *"
 echo "**********************************************"
 sleep 3
 #configuramos composer para laravel
-composer global require laravel/installer
+composer global require laravel/installer --update-with-all-dependencies
 
 echo "*****************************************"
 echo "* eliminamos la carpeta htdocs de xampp *"
@@ -139,6 +140,7 @@ echo "*************************************"
 sleep 3
 #nos movemos a la carpeta htdocs
 cd /opt/lampp/htdocs
+
 
 #creamos el nuevo proyecto
 echo "*************************************"
