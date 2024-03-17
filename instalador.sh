@@ -2,7 +2,6 @@
 clear
 echo "agregamos php 8 al sistema"
 sleep 3
-sudo dpkg -l | grep php | tee packages.txt
 sudo add-apt-repository ppa:ondrej/php
 
 echo "actualizamos el sistema"
