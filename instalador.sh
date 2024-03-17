@@ -68,7 +68,6 @@ echo "**********************"
 echo "* activamos composer *"
 echo "**********************"
 sleep 3
-cat ~/.bashrc
 source ~/.bashrc
 
 echo "********************"
