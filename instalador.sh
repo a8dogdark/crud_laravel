@@ -173,6 +173,13 @@ echo "* activamos el uso de host virtuales en xampp *"
 echo "***********************************************"
 sleep 3
 
+sudo chmod +x /opt/lampp/etc/httpd.conf
+
+sudo echo 'include etc/extra/httpd-vhost.conf' >> /opt/lampp/etc/httpd.conf
+
+sudo chmod 644 /opt/lampp/etc/httpd.conf
+
+
 echo "**********************************************"
 echo "* ahora debemos dar de alta el nuevo dominio *"
 echo "**********************************************"
