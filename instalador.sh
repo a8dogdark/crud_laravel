@@ -58,15 +58,15 @@ echo "********************************"
 sleep 3
 
 #agregamos composer al path
-<<<<<<< HEAD
-echo "inicio"
-sleep 3
-=======
-echo "inicio" >> ~/.bashrc
->>>>>>> 38a9aa912ccb7cf5cad37e380343798b5d835268
-echo 'export PATH="~/.config/composer/vendor/bin:$PATH"' >> ~/.bashrc
-echo 'echo $PATH' >> ~/.bashrc
-echo "fin" >> ~/.bashrc
+#<<<<<<< HEAD
+#echo "inicio"
+#sleep 3
+#=======
+#echo "inicio" >> ~/.bashrc
+#>>>>>>> 38a9aa912ccb7cf5cad37e380343798b5d835268
+#echo 'export PATH="~/.config/composer/vendor/bin:$PATH"' >> ~/.bashrc
+#echo 'echo $PATH' >> ~/.bashrc
+#echo "fin" >> ~/.bashrc
 
 
 echo "**********************"
