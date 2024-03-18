@@ -51,15 +51,22 @@ sleep 3
 # movemos composer
 sudo mv composer.phar /usr/local/bin/composer
 
+
 echo "********************************"
 echo "* agregamos composer al bashrc *"
 echo "********************************"
 sleep 3
+
 #agregamos composer al path
+<<<<<<< HEAD
 echo "inicio"
 sleep 3
+=======
+echo "inicio" >> ~/.bashrc
+>>>>>>> 38a9aa912ccb7cf5cad37e380343798b5d835268
 echo 'export PATH="~/.config/composer/vendor/bin:$PATH"' >> ~/.bashrc
 echo 'echo $PATH' >> ~/.bashrc
+echo "fin" >> ~/.bashrc
 
 
 echo "**********************"
@@ -176,7 +183,7 @@ sleep 3
 
 sudo chmod 777 /opt/lampp/etc/httpd.conf
 
-sudo echo 'include etc/extra/httpd-vhost.conf' >> /opt/lampp/etc/httpd.conf
+sudo echo 'Include etc/extra/httpd-vhost.conf' >> /opt/lampp/etc/httpd.conf
 
 sudo chmod 644 /opt/lampp/etc/httpd.conf
 
@@ -189,7 +196,7 @@ sleep 3
 sudo chmod 777 /opt/lampp/etc/extra/httpd-vhosts.conf
 
 sudo echo '<VirtualHost *:80>' >> /opt/lampp/etc/extra/httpd-vhosts.conf
-sudo echo 'DocumentRoot "/opt/lampp/htdocs/laravel/crud/public"' >> /opt/lampp/etc/extra/httpd-vhosts.conf
+sudo echo 'DocumentRoot "/opt/lampp/htdocs/crud/public"' >> /opt/lampp/etc/extra/httpd-vhosts.conf
 sudo echo 'ServerName crud.test' >> /opt/lampp/etc/extra/httpd-vhosts.conf
 sudo echo 'ServerAlias www.crud.test' >> /opt/lampp/etc/extra/httpd-vhosts.conf
 sudo echo '</VirtualHost>' >> /opt/lampp/etc/extra/httpd-vhosts.conf
@@ -202,11 +209,13 @@ echo "*******************************"
 sleep 3
 sudo /opt/lampp/lampp start
 
-#echo "*********************************"
-#echo "* instalamos visual studio code *"
-#echo "*********************************"
-#sleep 3
-#sudo snap install --classic code
+echo "*********************************"
+echo "* instalamos visual studio code *"
+echo "*********************************"
+sleep 3
+sudo snap install --classic code
+
+xdg-open http://crud.test
 
 echo "fin instalacion"
 
