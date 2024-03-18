@@ -7,6 +7,7 @@ fi
 
 if [[ $EUID -ne 0  ]]; then
     zenity --error \
+    --title="!!!ALERTA!!!"\
     --text="Debes ser Usuario Root\nIngresa con sudo su"\
     --width=500
     exit 1
@@ -16,3 +17,4 @@ zenity --info \
     --text="\n\n\nINSTALADOR DE LARAVEL CON LAMPP\n\nBy Dogdark 2024"\
     --width=500\
     --height=300
+
