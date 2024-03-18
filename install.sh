@@ -14,7 +14,15 @@ if [[ $EUID -ne 0  ]]; then
 fi
 
 zenity --info \
+    --title="Instalador"\
     --text="\n\n\nINSTALADOR DE LARAVEL CON LAMPP\n\nBy Dogdark 2024"\
     --width=500\
-    --height=300
+    --height=300\
+    --ok-label="Continuar"
 
+zenity --info \
+    --title="Instalador"\
+    --text="Se instalarán los siguientes paquetes.\n- Apache2\n- PHP 8.2\n- Mysql\n- Composer\n- Laravel\n- Nodejs\n- Proyecto crud."\
+    --width=500\
+    --height=300\
+    --ok-label="Continuar"
