@@ -56,6 +56,8 @@ echo "* agregamos composer al bashrc *"
 echo "********************************"
 sleep 3
 #agregamos composer al path
+echo "inicio"
+sleep 3
 echo 'export PATH="~/.config/composer/vendor/bin:$PATH"' >> ~/.bashrc
 echo 'echo $PATH' >> ~/.bashrc
 
@@ -64,12 +66,15 @@ echo "**********************"
 echo "* activamos composer *"
 echo "**********************"
 sleep 3
-cat ~/.bashrc
 source ~/.bashrc
+echo "fin"
+sleep 3
 
+echo " "
 echo "********************"
 echo "* instalamos xampp *"
 echo "********************"
+echo " "
 sleep 3
 #instalamos xampp
 sudo ./xampp-linux-x64-8.2.12-0-installer.run
