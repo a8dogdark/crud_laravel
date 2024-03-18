@@ -20,12 +20,13 @@ zenity --info \
     --height=300\
     --ok-label="Continuar"
 
-zenity --info \
+zenity --question \
     --title="Instalador"\
     --text="Se instalarán los siguientes paquetes.\n- Apache2\n- PHP 8.2\n- Mysql\n- Composer\n- Laravel\n- Nodejs\n- Proyecto crud."\
     --width=500\
     --height=300\
-    --ok-label="Continuar"
+    --ok-label="Continuar"\
+    --cancel-label="Cancelar"
 if [ $ans -eq 0 ]; then
     echo "sigamos"
 else
