@@ -1,5 +1,5 @@
 #!/bin/bash
-ans=$?
+
 #validamos si existe o no el paquete de zenity
 if ! [ -f "/usr/bin/zenity" ]; then 
     sudo apt install zenity -y
@@ -12,6 +12,10 @@ if [[ $EUID -ne 0  ]]; then
     --width=500
     exit 1
 fi
+
+terminamos(){
+    echo "Salimos de la Instalación"
+}
 
 zenity --info \
     --title="Instalador"\
@@ -27,8 +31,10 @@ zenity --question \
     --height=300\
     --ok-label="Continuar"\
     --cancel-label="Cancelar"
+
+ans=$?
 if [ $ans -eq 0 ]; then
     echo "sigamos"
 else
-    echo "terminamos"
+    terminamos
 fi
