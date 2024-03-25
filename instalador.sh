@@ -1,11 +1,14 @@
 t1#!/bin/bash
 clear
 
-cd ~/Descargas
 #validamos si es usuario root
 if [[ $EUID -ne 0 ]]; then
-  whiptail --title "INSTALADOR DE LARAVEL 11 BY DOGDARK 2024" --msgbox "Debes ser usuario root\nIngresa con sudo su" 20 50
-  exit 1
+  zenity --error\
+    --title="INSTALADOR DE LARAVEL 11 BY DOGDARK 2024"\
+    --text="Debes ser usuario <b>root<b>\nIngresa con sudo su"\
+    --width=500\
+    --height=200
+    exit 1
 fi
 
 #bienvenida
