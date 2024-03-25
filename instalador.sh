@@ -15,6 +15,42 @@ else
   clear
   exit 1
 fi
+
+clear
+echo "***************************"
+echo "* ACTUALIZAMOS EL SISTEMA *"
+echo "***************************"
+sleep 2
+apt update -y
+
+
+if [ -x "/usr/bin/curl" ]; then
+  echo "*******************"
+  echo "* Instalamos Curl *"
+  echo "*******************"
+  sleep 2
+  apt install curl -y
+fi
+
+
+if [ -x "/usr/bin/git" ]; then
+  echo "*******************"
+  echo "* Instalamos GIT  *"
+  echo "********************"
+  sleep 2
+  apt install git -y
+fi
+
+
+
+if [ -x "/usr/bin/unzip" ]; then
+  echo "*******************"
+  echo "* Instalamos UNZIP *"
+  echo "********************"
+  sleep 2
+  apt install unzip -y
+fi
+
 #elegimos los paquetes a instalar
 contenido=$(whiptail --title "INSTALADOR DE LARAVEL 11 BY DOGDARK 2024"\
   --checklist "\n\nElija su opción,\con la barra de espacio.\n\n" 20 50 7\
@@ -28,37 +64,9 @@ contenido=$(whiptail --title "INSTALADOR DE LARAVEL 11 BY DOGDARK 2024"\
   3>&1 1>&2 2>&3
 )
 
-clear
-echo "***************************"
-echo "* ACTUALIZAMOS EL SISTEMA *"
-echo "***************************"
-sleep 2
-apt update -y
-
-echo "*******************"
-echo "* Instalamos Curl *"
-echo "*******************"
-sleep 2
-if [ -x "/usr/bin/curl" ]; then
-  apt install curl -y
-fi
-
-echo "*******************"
-echo "* Instalamos GIT  *"
-echo "********************"
-sleep 2
-if [ -x "/usr/bin/git" ]; then
-  apt install git -y
-fi
 
 
-echo "*******************"
-echo "* Instalamos UNZIP *"
-echo "********************"
-sleep 2
-if [ -x "/usr/bin/unzip" ]; then
-  apt install unzip -y
-fi
+
 
 for contador in ${contenido[@]};
 do
