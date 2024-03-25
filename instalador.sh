@@ -73,7 +73,7 @@ do
     echo "* Agregamos el repositorio de PHP al sistema*"
     echo "**********************"
     sleep 2
-    sudo add-apt repository ppa:ondrej/php -y
+    sudo add-apt-repository ppa:ondrej/php -y
     echo "***************************"
     echo "* ACTUALIZAMOS EL SISTEMA *"
     echo "***************************"
