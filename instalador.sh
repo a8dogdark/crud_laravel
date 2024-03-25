@@ -25,7 +25,83 @@ contenido=$(whiptail --title "INSTALADOR DE LARAVEL 11 BY DOGDARK 2024"\
   5 "Laravel 11" OFF\
   6 "Proyecto crud" OFF\
   7 "Visual Studio Code" OFF\
+  3>&1 1>&2 2>&3
 )
+
+clear
+echo "***************************"
+echo "* ACTUALIZAMOS EL SISTEMA *"
+echo "***************************"
+sleep 2
+apt update -y
+echo "*******************"
+echo "* Instalamos Curl *"
+echo "*******************"
+sleep 2
+apt install curl -y
+echo "*******************"
+echo "* Instalamos GIT  *"
+echo "********************"
+sleep 2
+apt install git -y
+echo "*******************"
+echo "* Instalamos UNZIP *"
+echo "********************"
+sleep 2
+apt install unzip -y
+echo "*******************"
+echo "* Instalamos WGET *"
+echo "********************"
+sleep 2
+apt install wget -y
+
+for contador in ${contenido[@]};
+do
+  if [ ${contador[0]} == '"1"' ]; then
+    echo "*********************"
+    echo "* INSTALAMOS APACHE *"
+    echo "*********************"
+    sleep 2
+    apt install apache2 -y
+  fi
+  if [ ${contador[0]} == '""' ]; then
+    echo "**********************"
+    echo "* Instalamos PHP 8.3 *"
+    echo "**********************"
+    sleep 2
+    apt install php8.3-y
+  fi
+  if [ ${contador[0]} == '""' ]; then
+    echo "****************"
+    echo "*  *"
+    sleep 2
+    apt install -y
+  fi
+  if [ ${contador[0]} == '""' ]; then
+    echo "****************"
+    echo "*  *"
+    sleep 2
+    apt install -y
+  fi
+  if [ ${contador[0]} == '""' ]; then
+    echo "****************"
+    echo "*  *"
+    sleep 2
+    apt install -y
+  fi
+  if [ ${contador[0]} == '""' ]; then
+    echo "****************"
+    echo "*  *"
+    sleep 2
+    apt install -y
+  fi
+  if [ ${contador[0]} == '""' ]; then
+    echo "****************"
+    echo "*  *"
+    sleep 2
+    apt install -y
+  fi
+done
 
 
 
