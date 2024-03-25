@@ -80,8 +80,8 @@ do
     echo "**********************"
     sleep 2
     sudo add-apt-repository ppa:ondrej/php -y
-    exit 1
-    
+    break
+
     echo "***************************"
     echo "* ACTUALIZAMOS EL SISTEMA *"
     echo "***************************"
