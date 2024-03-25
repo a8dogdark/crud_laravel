@@ -23,7 +23,6 @@ echo "***************************"
 sleep 2
 apt update -y
 
-
 if [ -x "/usr/bin/curl" ]; then
   echo "*******************"
   echo "* Instalamos Curl *"
@@ -32,7 +31,6 @@ if [ -x "/usr/bin/curl" ]; then
   apt install curl -y
 fi
 
-
 if [ -x "/usr/bin/git" ]; then
   echo "*******************"
   echo "* Instalamos GIT  *"
@@ -40,8 +38,6 @@ if [ -x "/usr/bin/git" ]; then
   sleep 2
   apt install git -y
 fi
-
-
 
 if [ -x "/usr/bin/unzip" ]; then
   echo "*******************"
@@ -64,10 +60,6 @@ contenido=$(whiptail --title "INSTALADOR DE LARAVEL 11 BY DOGDARK 2024"\
   3>&1 1>&2 2>&3
 )
 
-
-
-
-
 for contador in ${contenido[@]};
 do
   if [ ${contador[0]} == '"1"' ]; then
@@ -77,6 +69,7 @@ do
     sleep 2
     apt install apache2 -y
   fi
+
   if [ ${contador[0]} == '"2"' ]; then
     echo "**********************"
     echo "* Instalamos PHP 8.3 *"
@@ -88,6 +81,7 @@ do
     sleep 2
     sudo add-apt-repository ppa:ondrej/php -y
     exit 1
+    
     echo "***************************"
     echo "* ACTUALIZAMOS EL SISTEMA *"
     echo "***************************"
@@ -128,32 +122,36 @@ do
     echo "*************************"
     sleep 2
     apt install php8.3-dom -y
-
   fi
+
   if [ ${contador[0]} == '"3"' ]; then
     echo "****************"
     echo "*  *"
     sleep 2
     apt install -y
   fi
+  
   if [ ${contador[0]} == '"4"' ]; then
     echo "****************"
     echo "*  *"
     sleep 2
     apt install -y
   fi
+
   if [ ${contador[0]} == '"5"' ]; then
     echo "****************"
     echo "*  *"
     sleep 2
     apt install -y
   fi
+
   if [ ${contador[0]} == '"6"' ]; then
     echo "****************"
     echo "*  *"
     sleep 2
     apt install -y
   fi
+
   if [ ${contador[0]} == '"7"' ]; then
     echo "****************"
     echo "*  *"
