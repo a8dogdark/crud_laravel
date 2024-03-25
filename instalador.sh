@@ -64,38 +64,83 @@ do
     sleep 2
     apt install apache2 -y
   fi
-  if [ ${contador[0]} == '""' ]; then
+  if [ ${contador[0]} == '"2"' ]; then
     echo "**********************"
     echo "* Instalamos PHP 8.3 *"
     echo "**********************"
     sleep 2
-    apt install php8.3-y
+    echo "**********************"
+    echo "* Agregamos el repositorio de PHP al sistema*"
+    echo "**********************"
+    sleep 2
+    sudo add-apt repository ppa:ondrej/php -y
+    echo "***************************"
+    echo "* ACTUALIZAMOS EL SISTEMA *"
+    echo "***************************"
+    sleep 2
+    apt update -y
+    echo "**********************"
+    echo "* Instalamos PHP 8.3 *"
+    echo "**********************"
+    sleep 2
+    apt install php8.3 -y
+
+    echo "*************************"
+    echo "* Instalamos PHP 8.3 CLI*"
+    echo "*************************"
+    sleep 2
+    apt install php8.3-cli -y
+
+    echo "*******************************"
+    echo "* Instalamos PHP 8.3 MBSTRING *"
+    echo "*******************************"
+    sleep 2
+    apt install php8.3-mbstring -y
+
+    echo "**************************"
+    echo "* Instalamos PHP 8.3 XML *"
+    echo "**************************"
+    sleep 2
+    apt install php8.3-xml -y
+
+    echo "**************************"
+    echo "* Instalamos PHP 8.3 CURL*"
+    echo "**************************"
+    sleep 2
+    apt install php8.3-curl -y
+
+    echo "*************************"
+    echo "* Instalamos PHP 8.3 DOM*"
+    echo "*************************"
+    sleep 2
+    apt install php8.3-dom -y
+
   fi
-  if [ ${contador[0]} == '""' ]; then
+  if [ ${contador[0]} == '"3"' ]; then
     echo "****************"
     echo "*  *"
     sleep 2
     apt install -y
   fi
-  if [ ${contador[0]} == '""' ]; then
+  if [ ${contador[0]} == '"4"' ]; then
     echo "****************"
     echo "*  *"
     sleep 2
     apt install -y
   fi
-  if [ ${contador[0]} == '""' ]; then
+  if [ ${contador[0]} == '"5"' ]; then
     echo "****************"
     echo "*  *"
     sleep 2
     apt install -y
   fi
-  if [ ${contador[0]} == '""' ]; then
+  if [ ${contador[0]} == '"6"' ]; then
     echo "****************"
     echo "*  *"
     sleep 2
     apt install -y
   fi
-  if [ ${contador[0]} == '""' ]; then
+  if [ ${contador[0]} == '"7"' ]; then
     echo "****************"
     echo "*  *"
     sleep 2
