@@ -1,4 +1,4 @@
-#!/bin/bash
+t1#!/bin/bash
 clear
 
 cd ~/Descargas
@@ -34,26 +34,31 @@ echo "* ACTUALIZAMOS EL SISTEMA *"
 echo "***************************"
 sleep 2
 apt update -y
+
 echo "*******************"
 echo "* Instalamos Curl *"
 echo "*******************"
 sleep 2
-apt install curl -y
+if [ -x "/usr/bin/curl" ]; then
+  apt install curl -y
+fi
+
 echo "*******************"
 echo "* Instalamos GIT  *"
 echo "********************"
 sleep 2
-apt install git -y
+if [ -x "/usr/bin/git" ]; then
+  apt install git -y
+fi
+
+
 echo "*******************"
 echo "* Instalamos UNZIP *"
 echo "********************"
 sleep 2
-apt install unzip -y
-echo "*******************"
-echo "* Instalamos WGET *"
-echo "********************"
-sleep 2
-apt install wget -y
+if [ -x "/usr/bin/unzip" ]; then
+  apt install unzip -y
+fi
 
 for contador in ${contenido[@]};
 do
@@ -74,6 +79,7 @@ do
     echo "**********************"
     sleep 2
     sudo add-apt-repository ppa:ondrej/php -y
+    exit 1
     echo "***************************"
     echo "* ACTUALIZAMOS EL SISTEMA *"
     echo "***************************"
