@@ -2,6 +2,34 @@
 clear
 
 cd ~/Descargas
+#validamos si es usuario root
+if [[ $EUID -ne 0 ]]; then
+  whiptail --title "INSTALADOR DE LARAVEL 11 BY DOGDARK 2024" --msgbox "Debes ser usuario root\nIngresa con sudo su" 20 50
+  exit 1
+fi
+
+#bienvenida
+if whiptail --title "INSTALADOR DE LARAVEL 11 BY DOGDARK 2024" --yesno "Bienvenido al instalador de Laravel 11" 10 50 --yes-button "CONTINUAR" --no-button "CANCELAR"; then
+  echo ""
+else
+  clear
+  exit 1
+fi
+#elegimos los paquetes a instalar
+contenido=$(whiptail --title "INSTALADOR DE LARAVEL 11 BY DOGDARK 2024"\
+  --checklist "\n\nElija su opción,\con la barra de espacio.\n\n" 20 50 7\
+  1 "Apache" ON\
+  2 "Php 8.3" OFF\
+  3 "Mysql" OFF\
+  4 "Composer" OFF\
+  5 "Laravel 11" OFF\
+  6 "Proyecto crud" OFF\
+  7 "Visual Studio Code" OFF\
+)
+
+
+
+
 echo "******************************"
 echo "* agregamos php 8 al sistema *"
 echo "******************************"
