@@ -177,11 +177,13 @@ do
 		echo "#Descargando PhpMyAdmin"
 		sleep 2
 		wget https://files.phpmyadmin.net/phpMyAdmin/5.2.1/phpMyAdmin-5.2.1-all-languages.zip
+		chmod +x phpMyAdmin-5.2.1-all-languages phpmyadmin.zip
+		mv phpMyAdmin-5.2.1-all-languages phpmyadmin.zip
 
 		echo "98"
 		echo "#Descomprimimos PhpMyAdmin"
 		sleep 2
-		mv phpMyAdmin-5.2.1-all-languages phpmyadmin.zip
+		
 		unzip phpmyadmin.zip -d /var/www/html &> /dev/null
 		chmod 755 -R /var/www/html/phpmyadmin
 
