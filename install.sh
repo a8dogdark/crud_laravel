@@ -38,7 +38,7 @@ contenido=$(zenity --list\
 	--text="Selecciona los paquetes a instalar"\
 	--checklist\
 	--column="#" --column="Orden" --column="Paquete"\
-	1 "1" "Apache2" 2 "2" "PHP 8.3" 3 "3" "Mysql" 4 "4" "Composer" 5 "5" "Laravel 11" 6 "6" "Proyecto Crud" 7 "7" "Visual Studio Code"
+	1 "1" "Apache2" 2 "2" "PHP 8.3" 3 "3" "Mysql" 4 "4" "Composer" 5 "5" "Laravel 11" 6 "6" "NodeJS" 7 "7" "Proyecto Crud" 8 "8" "Visual Studio Code"
 )
 
 muestro=${contenido//|/} #eliminamos los caracteres |
@@ -77,11 +77,6 @@ do
 		echo "20"
 		echo "#Agregando repositorio PHP 8.3"
 		sleep 2
-		#/etc/apt/sources.list
-		#echo " " >> /etc/apt/sources.list
-		#echo "# repositorio de php" >> /etc/apt/sources.list
-		#echo " " >> /etc/apt/sources.list
-		#echo "" >> /etc/apt/sources.list
 		sudo add-apt-repository ppa:ondrej/php -y &> /dev/null
 		
 		echo "22"
@@ -97,59 +92,69 @@ do
 		echo "26"
 		echo "#Instalando PHP 8.3"
 		sleep 2
-		apt install php8.3 -y
+		apt install php8.3 -y &> /dev/null
 
 		echo "27"
 		echo "#Instalando PHP 8.3-cli"
 		sleep 2
-		apt install php8.3-cli -y
+		apt install php8.3-cli -y &> /dev/null
 		
 		echo "28"
 		echo "#Instalando PHP 8.3-xml"
 		sleep 2
-		apt install php8.3-xml -y
+		apt install php8.3-xml -y &> /dev/null
 
 		echo "29"
 		echo "#Instalando PHP 8.3-curl"
 		sleep 2
-		apt install php8.3-curl -y
+		apt install php8.3-curl -y &> /dev/null
 
 		echo "29"
 		echo "#Instalando PHP 8.3-dom"
 		sleep 2
-		apt install php8.3-dom -y
-
-		sleep 2
+		apt install php8.3-dom -y &> /dev/null
 	fi
 	
 	if [ ${muestro[@]:$posa:$posb} == "3" ]; then
 		echo "30"
 		echo "#Instalando MYSQL"
 		sleep 2
+		#apt install php8.3-dom -y &> /dev/null
 	fi
 	
 	if [ ${muestro[@]:$posa:$posb} == "4" ]; then
 		echo "40"
 		echo "#Instalando COMPOSER"
 		sleep 2
+		#apt install php8.3-dom -y &> /dev/null
 	fi
 	
 	if [ ${muestro[@]:$posa:$posb} == "5" ]; then
 		echo "50"
 		echo "#Instalando LARAVEL 11"
 		sleep 2
+		#apt install php8.3-dom -y &> /dev/null
 	fi
 	
 	if [ ${muestro[@]:$posa:$posb} == "6" ]; then
 		echo "60"
-		echo "#Instalando PROYECTO CRUD"
+		echo "#Instalando NODEJS"
 		sleep 2
+		#apt install php8.3-dom -y &> /dev/null
 	fi
 	
 	if [ ${muestro[@]:$posa:$posb} == "7" ]; then
 		echo "70"
+		echo "#Instalando PROYECTO CRUD"
+		sleep 2
+		#apt install php8.3-dom -y &> /dev/null
+	fi
+
+	if [ ${muestro[@]:$posa:$posb} == "8" ]; then
+		echo "80"
 		echo "#Instalando VISUAL STUDIO CODE"
 		sleep 2
+		#apt install php8.3-dom -y &> /dev/null
 	fi
 	
 	if [ $posa == 0 ] || [ $posb == 1 ];then
