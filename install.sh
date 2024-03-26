@@ -55,7 +55,8 @@ do
 		echo "0"
 		echo "#Actualizamos el sistema"
 		apt update -y &> /dev/null
-		
+		apt list --upgradable -y &> /dev/null
+		apt upgrade -y &> /dev/null
 		sleep 1
 	fi
 	
@@ -119,7 +120,7 @@ do
 		echo "30"
 		echo "#Instalando MYSQL"
 		sleep 2
-		#apt install php8.3-dom -y &> /dev/null
+		apt install mysql-server -y &> /dev/null
 	fi
 	
 	if [ ${muestro[@]:$posa:$posb} == "4" ]; then
