@@ -54,20 +54,30 @@ do
 	if [ $i = 0 ]; then
 		echo "0"
 		echo "#Actualizamos el sistema"
-		apt update -y &> /dev/null
-		apt list --upgradable -y &> /dev/null
-		apt upgrade -y &> /dev/null
 		sleep 1
+		apt update -y &> /dev/null
+		
+
+		echo "4"
+		echo "#Actualizamos las listas"
+		sleep 1
+		apt list --upgradable -y &> /dev/null
+
+		echo "8"
+		echo "#Upgradamos el sistema"
+		sleep 1
+		apt upgrade -y &> /dev/null
 	fi
 	
 	if [ ${muestro[@]:$posa:$posb} == "1" ]; then
 		echo "10" 
 		echo "#Instalando apache2"
-		sleep 2
+		sleep 1
 		apt install apache2 -y &> /dev/null
+
 		echo "15"
 		echo "#Configurando apache2"
-		sleep 2
+		sleep 1
 		chmod 777 -R /var/www/html
 		rm /var/www/html/index.html
 		touch /var/www/html/index.html
@@ -77,49 +87,49 @@ do
 	if [ ${muestro[@]:$posa:$posb} == "2" ]; then
 		echo "20"
 		echo "#Agregando repositorio PHP 8.3"
-		sleep 2
+		sleep 1
 		sudo add-apt-repository ppa:ondrej/php -y &> /dev/null
 		
 		echo "22"
 		echo "#Actualizamos el sistema"
-		sleep 2
+		sleep 1
 		apt update -y &> /dev/null
 
 		echo "24"
 		echo "#Instalamos dependencias requeridas para PHP8.3"
-		sleep 2
+		sleep 1
 		apt install lsb-release ca-certificates apt-transport-https software-properties-common curl git unzip -y &> /dev/null
 
 		echo "26"
 		echo "#Instalando PHP 8.3"
-		sleep 2
+		sleep 1
 		apt install php8.3 -y &> /dev/null
 
 		echo "27"
 		echo "#Instalando PHP 8.3-cli"
-		sleep 2
+		sleep 1
 		apt install php8.3-cli -y &> /dev/null
 		
 		echo "28"
 		echo "#Instalando PHP 8.3-xml"
-		sleep 2
+		sleep 1
 		apt install php8.3-xml -y &> /dev/null
 
 		echo "29"
 		echo "#Instalando PHP 8.3-curl"
-		sleep 2
+		sleep 1
 		apt install php8.3-curl -y &> /dev/null
 
 		echo "29"
 		echo "#Instalando PHP 8.3-dom"
-		sleep 2
+		sleep 1
 		apt install php8.3-dom -y &> /dev/null
 	fi
 	
 	if [ ${muestro[@]:$posa:$posb} == "3" ]; then
 		echo "30"
 		echo "#Instalando MYSQL"
-		sleep 2
+		sleep 1
 		apt install mysql-server -y &> /dev/null
 	fi
 	
