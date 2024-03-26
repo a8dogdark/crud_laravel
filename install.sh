@@ -38,7 +38,7 @@ contenido=$(zenity --list\
 	--text="Selecciona los paquetes a instalar"\
 	--checklist\
 	--column="#" --column="Orden" --column="Paquete"\
-	1 "1" "Apache2" 2 "2" "PHP 8.3" 3 "3" "Mysql" 4 "4" "Composer" 5 "5" "Laravel 11" 6 "6" "NodeJS" 7 "7" "Proyecto Crud" 8 "8" "Visual Studio Code"
+	1 "1" "Apache2" 2 "2" "PHP 8.3" 3 "3" "Mysql" 4 "4" "Composer" 5 "5" "Laravel 11" 6 "6" "NodeJS" 7 "7" "Proyecto Crud" 8 "8" "Visual Studio Code" 9 "9" "PhpMyAdmin 5.2.1" 
 )
 
 muestro=${contenido//|/} #eliminamos los caracteres |
@@ -166,6 +166,22 @@ do
 		echo "#Instalando VISUAL STUDIO CODE"
 		sleep 2
 		#apt install php8.3-dom -y &> /dev/null
+	fi
+
+	if [ ${muestro[@]:$posa:$posb} == "9" ]; then
+		echo "90"
+		echo "#Instalando PhpMyAdmin"
+		sleep 2
+		
+		echo "94"
+		echo "#Descargando PhpMyAdmin"
+		sleep 2
+		wget https://files.phpmyadmin.net/phpMyAdmin/5.2.1/phpMyAdmin-5.2.1-all-languages.zip
+
+		echo "98"
+		echo "#Descomprimimos PhpMyAdmin"
+		sleep 2
+		unzip phpMyAdmin-5.2.1-all-languages.zip -d /var/www/html &> /dev/null
 	fi
 	
 	if [ $posa == 0 ] || [ $posb == 1 ];then
