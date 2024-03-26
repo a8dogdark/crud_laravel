@@ -76,21 +76,49 @@ do
 	if [ ${muestro[@]:$posa:$posb} == "2" ]; then
 		echo "20"
 		echo "#Agregando repositorio PHP 8.3"
+		sleep 2
 		#/etc/apt/sources.list
 		#echo " " >> /etc/apt/sources.list
 		#echo "# repositorio de php" >> /etc/apt/sources.list
 		#echo " " >> /etc/apt/sources.list
 		#echo "" >> /etc/apt/sources.list
-		sudo sudo add-apt-repository ppa:ondrej/php -y &> /dev/null
-		echo "23"
-		echo "#Actualizamos el sistema"
-		apt update -y &> /dev/null
+		sudo add-apt-repository ppa:ondrej/php -y &> /dev/null
 		
+		echo "22"
+		echo "#Actualizamos el sistema"
+		sleep 2
+		apt update -y &> /dev/null
+
+		echo "24"
+		echo "#Instalamos dependencias requeridas para PHP8.3"
+		sleep 2
+		apt install lsb-release ca-certificates apt-transport-https software-properties-common curl git unzip -y &> /dev/null
+
 		echo "26"
 		echo "#Instalando PHP 8.3"
+		sleep 2
+		apt install php8.3 -y
+
+		echo "27"
+		echo "#Instalando PHP 8.3-cli"
+		sleep 2
+		apt install php8.3-cli -y
 		
-		
-		
+		echo "28"
+		echo "#Instalando PHP 8.3-xml"
+		sleep 2
+		apt install php8.3-xml -y
+
+		echo "29"
+		echo "#Instalando PHP 8.3-curl"
+		sleep 2
+		apt install php8.3-curl -y
+
+		echo "29"
+		echo "#Instalando PHP 8.3-dom"
+		sleep 2
+		apt install php8.3-dom -y
+
 		sleep 2
 	fi
 	
@@ -137,4 +165,9 @@ done|zenity --progress\
 	--height=200\
 	--percentage=0\
 	--auto-close
-	
+
+zenity --info\
+	--title="INSTALADOR LARAVEL 11 BY DOGDARK 2024"\
+	--width=500\
+	--height=200\
+	--text="FIN INSTALACIÓN"
