@@ -181,7 +181,11 @@ do
 		echo "98"
 		echo "#Descomprimimos PhpMyAdmin"
 		sleep 2
-		unzip phpMyAdmin-5.2.1-all-languages.zip -d /var/www/html &> /dev/null
+		mv phpMyAdmin-5.2.1-all-languages phpmyadmin.zip
+		unzip phpmyadmin.zip -d /var/www/html &> /dev/null
+		chmod 755 -R /var/www/html/phpmyadmin
+
+		rm phpmyadmin.zip
 	fi
 	
 	if [ $posa == 0 ] || [ $posb == 1 ];then
