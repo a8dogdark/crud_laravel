@@ -62,8 +62,15 @@ do
 	if [ ${muestro[@]:$posa:$posb} == "1" ]; then
 		echo "10" 
 		echo "#Instalando apache2"
-		apt install apache2 -y &> /dev/null
 		sleep 2
+		apt install apache2 -y &> /dev/null
+		echo "15"
+		echo "#Configurando apache2"
+		sleep 2
+		chmod 777 -R /var/www/html
+		rm /var/www/html/index.html
+		touch /var/www/html/index.html
+		echo '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Laravel 11 By Dogdark</title></head><body><h1>Instalador de Laravel 11 By dogdark</h1></body></html>'	>> /var/www/html/index.html
 	fi
 	
 	if [ ${muestro[@]:$posa:$posb} == "2" ]; then
