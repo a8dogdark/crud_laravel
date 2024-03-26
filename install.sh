@@ -182,7 +182,7 @@ do
 
 		echo "98"
 		echo "#Descomprimimos PhpMyAdmin"
-		sleep 2
+		sleep 1
 		
 		unzip phpmyadmin.zip -d /var/www/html &> /dev/null
 		chmod 755 -R /var/www/html/phpmyadmin
