@@ -177,7 +177,7 @@ do
 		echo "#Descargando PhpMyAdmin" 
 		sleep 2
 		wget https://files.phpmyadmin.net/phpMyAdmin/5.2.1/phpMyAdmin-5.2.1-all-languages.zip
-		chmod +x phpMyAdmin-5.2.1-all-languages phpmyadmin.zip
+		chmod +x phpMyAdmin-5.2.1-all-languages.zip
 		mv phpMyAdmin-5.2.1-all-languages.zip phpmyadmin.zip
 
 		echo "98"
