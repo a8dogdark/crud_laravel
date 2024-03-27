@@ -133,7 +133,7 @@ do
 		apt install mysql-server -y &> /dev/null
 		#validamos si esta php 8.3 instalado
 
-		if [ -f "/usr/bin/php8.3"]; then
+		if [ -f "/usr/bin/php8.3" ]; then
 			echo "34"
 			echo "#Instalando PHP 8.3 MYSQL"
 			sleep 1
