@@ -178,16 +178,16 @@ do
 		sleep 2
 		wget https://files.phpmyadmin.net/phpMyAdmin/5.2.1/phpMyAdmin-5.2.1-all-languages.zip
 		chmod +x phpMyAdmin-5.2.1-all-languages.zip
-		mv phpMyAdmin-5.2.1-all-languages.zip phpmyadmin.zip
 
 		echo "98"
 		echo "#Descomprimimos PhpMyAdmin"
 		sleep 1
 		
-		unzip phpmyadmin.zip -d /var/www/html &> /dev/null
+		unzip phpMyAdmin-5.2.1-all-languages.zip -d /var/www/html &> /dev/null
+		mv /var/www/html/phpMyAdmin-5.2.1-all-languages /var/www/html/phpmyadmin
 		chmod 755 -R /var/www/html/phpmyadmin
 
-		rm phpmyadmin.zip
+		rm phpMyAdmin-5.2.1-all-languages.zip
 	fi
 	
 	if [ $posa == 0 ] || [ $posb == 1 ];then
