@@ -131,6 +131,18 @@ do
 		echo "#Instalando MYSQL"
 		sleep 1
 		apt install mysql-server -y &> /dev/null
+		#validamos si esta php 8.3 instalado
+
+		if [ -f "/usr/bin/php8.3"]; then
+			echo "34"
+			echo "#Instalando PHP 8.3 MYSQL"
+			sleep 1
+			apt install php8.3-mysql -y &> /dev/null
+			echo "38"
+			echo "#Reiniciando el servidor"
+			sleep 1
+			sudo service apache2 restart
+		fi
 	fi
 	
 	if [ ${muestro[@]:$posa:$posb} == "4" ]; then
