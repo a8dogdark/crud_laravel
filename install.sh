@@ -134,15 +134,23 @@ do
 		#validamos si esta php 8.3 instalado
 
 		if [ -f "/usr/bin/php8.3" ]; then
-			echo "34"
+			echo "33"
 			echo "#Instalando PHP 8.3 MYSQL"
 			sleep 1
 			apt install php8.3-mysql -y &> /dev/null
-			echo "38"
+			echo "36"
 			echo "#Reiniciando el servidor"
 			sleep 1
 			sudo service apache2 restart
 		fi
+
+		#creamos la password para root en blanco
+		echo "39"
+		echo "#Instalando MYSQL"
+		sleep 1
+		echo 'sudo mysql'
+		echo 'ALTER USER "root"@"localhost" IDENTIFIED WITH mysql_native_password BY "";'
+		echo 'exit'
 	fi
 	
 	if [ ${muestro[@]:$posa:$posb} == "4" ]; then
