@@ -19,37 +19,37 @@
         </div>
         <ul class="nav__links">
             <li>
-                <a href="#">
+                <a href="#" title="Panel de control Administración">
                     <i class='bx bx-grid-alt'></i>
                     <span class="link__name">Panel de Control</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" title="Listado de Articulos Creados">
                     <i class='bx bxs-bookmarks'></i>
                     <span class="link__name">Artículos</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" title="Listado de Categorías Creadas">
                     <i class='bx bx-category'></i>
                     <span class="link__name">Categorías</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" title="Listado de comentarios dejados">
                     <i class='bx bxs-message-alt-detail'></i>
                     <span class="link__name">Comentarios</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" title="Listado de usuarios">
                     <i class='bx bxs-user-account'></i>
                     <span class="link__name">Usuarios</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" title="Roles de Usuarios">
                     <i class='bx bx-objects-vertical-center'></i>
                     <span class="link__name">Roles</span>
                 </a>
@@ -70,8 +70,12 @@
                 <i class='bx bxs-chevron-down'></i>
             </div>
         </nav>
+
+        <div class="sidebar__content">
+            @yield('contentadmin')
+        </div>
     </section>
 
-    @yield('contentadmin')
+    
 </body>
 </html>

@@ -16,7 +16,7 @@
     --color-negro: #222;
     --color-verde: #10ae22;
     --color-gris-oscuro: #1f2937;
-    --color-gris-oscuro-claro: #243145;
+    --color-gris-oscuro-claro: #28374e;
 }
 .texto__azul{
     color: var(--color-azul) !important;

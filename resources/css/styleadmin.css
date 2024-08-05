@@ -44,6 +44,7 @@
     display: flex;
     align-items: center;
     transition: all 0.4s ease;
+    cursor: pointer;
 }
 .sidebar__admin .nav__links li a:hover{
     background-color: var(--color-gris-oscuro-claro);
@@ -66,6 +67,7 @@
 }
 
 .section__home nav{
+
     height: 80px;
     background-color: var(--color-gris-oscuro);
     padding: 0 20px;
@@ -84,4 +86,16 @@
 .section__home nav .sidebar__button i{
     font-size: 40px;
     margin-right: 10px;
+}
+
+.section__home nav .sidebar__profile__details{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    min-width: 190px;
+    font-size: 20px;
+}
+
+.section__home .sidebar__content{
+    padding: 2rem;
 }
