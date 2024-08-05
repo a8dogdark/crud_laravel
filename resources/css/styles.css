@@ -24,3 +24,7 @@
 .texto__rojo{
     color: var(--color-rojo);
 }
+
+.text-justify{
+    text-align: justify;
+}

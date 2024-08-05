@@ -12,70 +12,57 @@
     @vite(['resources/css/app.css'])
 </head>
 <body>
-    <div class="sidebar__admin">
-        <div class="logo__details">
-            <i class='bx bxl-c-plus-plus'></i>
-            <span class="logo__name">DOGDARK</span>
-        </div>
-        <ul class="nav__links">
-            <li>
-                <a href="#" title="Panel de control Administración">
-                    <i class='bx bx-grid-alt'></i>
-                    <span class="link__name">Panel de Control</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" title="Listado de Articulos Creados">
-                    <i class='bx bxs-bookmarks'></i>
-                    <span class="link__name">Artículos</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" title="Listado de Categorías Creadas">
-                    <i class='bx bx-category'></i>
-                    <span class="link__name">Categorías</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" title="Listado de comentarios dejados">
-                    <i class='bx bxs-message-alt-detail'></i>
-                    <span class="link__name">Comentarios</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" title="Listado de usuarios">
-                    <i class='bx bxs-user-account'></i>
-                    <span class="link__name">Usuarios</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" title="Roles de Usuarios">
-                    <i class='bx bx-objects-vertical-center'></i>
-                    <span class="link__name">Roles</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <section class="section__home">
+    <section class="sidebar__menu">
         <nav>
-            <div class="sidebar__button">
-                <i class='bx bx-menu'></i>
-                <span class="sidebar__dashboard">Dashboard</span>
-            </div>
-
-            <div class="sidebar__profile__details">
-                <i class='bx bxs-user-circle'></i>
-                <span class="sidebar__admin__name">Admin Name</span>
-                <i class='bx bxs-chevron-down'></i>
-            </div>
+            <ul>
+                <li>
+                    <a href="{{ route('home') }}" class="sidebar__menu_link" title="Sitio Principal">
+                        <i class='bx bx-sitemap'></i>
+                        <span class="sidebar__menu__title">DOGDARK</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('aarticulos') }}" class="sidebar__menu_link" title="Artículos Publicados">
+                        <i class='bx bxs-bookmarks'></i>
+                        <span class="sidebar__menu__title">Artículos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('acategorias') }}" class="sidebar__menu_link" title="Categorías">
+                        <i class='bx bxs-category'></i>
+                        <span class="sidebar__menu__title">Categorías</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('acomentarios') }}" class="sidebar__menu_link" title="Comentarios">
+                        <i class='bx bxs-message-alt-detail'></i>
+                        <span class="sidebar__menu__title">Comentarios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('ausuarios') }}" class="sidebar__menu_link" title="Usuarios Registrados">
+                        <i class='bx bxs-user'></i>
+                        <span class="sidebar__menu__title">Usuarios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('aroles') }}" class="sidebar__menu_link" title="Roles de Usuarios">
+                        <i class='bx bxs-user-detail'></i>
+                        <span class="sidebar__menu__title">Roles</span>
+                    </a>
+                </li>
+            </ul>
         </nav>
-
-        <div class="sidebar__content">
-            @yield('contentadmin')
-        </div>
     </section>
 
-    
+    <section class="sidebar__contenido">
+        <div class="sidebar__contenido__title">
+            DASHBOARD
+        </div>
+        <div class="sidebar__contenido__body">
+            @yield('contentadmin')
+        </div>
+        
+    </section>
 </body>
 </html>
