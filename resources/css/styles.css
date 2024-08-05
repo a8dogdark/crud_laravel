@@ -1,0 +1,18 @@
+/* estilos generales del sitio */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --color-azul: #0a47fe;
+    --color-rojo: red;
+}
+
+.texto__azul{
+    color: var(--color-azul) !important;
+}
+
+.texto__rojo{
+    color: var(--color-rojo);
+}
