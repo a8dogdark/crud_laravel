@@ -1,138 +1,87 @@
-/* estilos de administración */
-#sidebar-toogle{
-    display: none;
-}
 .sidebar__admin{
-    height: 100%;
-    width: 240px;
     position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 100;
-    background-color: var(--color-azul);
-    overflow-y: auto;
-    transition: 500ms;
+    height: 100vh;
+    width: 240px;
+    background-color: var(--color-gris-oscuro);
 }
-.sidebar__admin, .sidebar__admin a{
+.sidebar__admin .logo__details{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.sidebar__admin .logo__details i{
+    font-size: 28px;
+    font-weight: 500;
+    min-width: 60px;
+    text-align: center;
+}
+.sidebar__admin .logo__details .logo__name{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.sidebar__admin .logo__details i,
+.sidebar__admin .logo__details .logo__name,
+.sidebar__admin .nav__links li a i,
+.sidebar__admin .nav__links li a .link__name
+{
     color: var(--color-blanco);
 }
-.sidebar__admin__header{
+
+.sidebar__admin .nav__links{
+    margin-top: 16px;
+}
+
+.sidebar__admin .nav__links li{
+    height: 50px;
+    width: 100%;
+    list-style: none;
+}
+.sidebar__admin .nav__links li a{
+    height: 100%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 60px;
-    padding: 0rem 1rem;
-    font-size: 1.2rem;
+    transition: all 0.4s ease;
 }
-.sidebar__admin__header .bx{
-    font-size: 1.6rem;
+.sidebar__admin .nav__links li a:hover{
+    background-color: var(--color-gris-oscuro-claro);
 }
-.sidebar__admin__menu{
-    padding: 1rem;
+.sidebar__admin .nav__links li a i{
+    min-width: 60px;
+    text-align: center;
+    font-size: 30px;
 }
-.sidebar__admin li{
-    margin-bottom: 1rem;
+.sidebar__admin .nav__links li a .link__name{
+    font-size: 18px;
+    font-weight: 500;
 }
-.sidebar__admin a {
-    font-size: 1.4rem;
-}
-.sidebar__admin a span:last-child{
-    padding-left: .6rem;
-}
-#sidebar-toogle:checked ~ .sidebar__admin {
-    width: 60px;
-}
-#sidebar-toogle:checked ~ .sidebar__admin .sidebar__admin__header h3 span,
-#sidebar-toogle:checked ~ .sidebar__admin li span:last-child {
-    display: none;
-}
-#sidebar-toogle:checked ~ .sidebar__admin .sidebar__admin__header,
-#sidebar-toogle:checked ~ .sidebar__admin li {
-    display: flex;
-    justify-content: center;
-}
-#sidebar-toogle:checked ~ .main-admin {
-    margin-left: 60px;
-}
-#sidebar-toogle:checked ~ .main-admin .main-admin-header {
-    left: 60px;
-}
-.main-admin{
+
+.section__home{
     position: relative;
-    margin-left: 240px;
-    transition: margin-left 500ms;
-}
-.main-admin .main-admin-header{
-    position: fixed;
-    left: 240px;
-    top: 0;
-    z-index: 100;
+    min-height: 100vh;
     width: calc(100% - 240px);
-    background: var(--color-blanco);
-    height: 60px;
-    padding: 0rem 1rem;
+    left: 240px;
+}
+
+.section__home nav{
+    height: 80px;
+    background-color: var(--color-gris-oscuro);
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--color-verde);
-    transition: left 500ms;
+    color: var(--color-blanco);
 }
-
-.main-admin .search-admin{
+.section__home nav .sidebar__button{
     display: flex;
     align-items: center;
+    font-size: 30px;
+    font-weight: 500;
 }
 
-.main-admin .search-admin input{
-    border: 0;
-    outline: 0;
-    padding: 1rem;
-    height: 38px;
-}
-.main-admin main{
-    margin-top: 60px;
-    min-height: 90vh;
-    padding: 1rem;
-}
-@media only screen and (max-width: 1200px){
-    .sidebar__admin{
-        width: 60px;
-        z-index: 150;
-    }
-    .sidebar__admin .sidebar__admin__header h3 span,
-    .sidebar__admin li span:last-child {
-        display: none;
-    }
-    .sidebar__admin .sidebar__admin__header,
-    .sidebar__admin li {
-        display: flex;
-        justify-content: center;
-    }
-    .main-admin {
-        margin-left: 60px;
-    }
-    .main-admin .main-admin-header {
-        left: 60px;
-        width: calc(100% - 60px);
-    }
-    #sidebar-toogle:checked ~ .sidebar__admin {
-        width: 240px;
-    }
-    #sidebar-toogle:checked ~ .sidebar__admin .sidebar__admin__header h3 span,
-    #sidebar-toogle:checked ~ .sidebar__admin li span:last-child {
-        display: inline;
-    }
-    #sidebar-toogle:checked ~ .sidebar__admin .sidebar__admin__header {
-        display: flex;
-        justify-content: space-between;
-    }
-    #sidebar-toogle:checked ~ .sidebar__admin li {
-        display: block;
-    }
-    #sidebar-toogle:checked ~ .main-admin {
-        margin-left: 60px;
-    }
-    #sidebar-toogle:checked ~ .main-admin .main-admin-header {
-        left: 60px;
-    }
+.section__home nav .sidebar__button i{
+    font-size: 40px;
+    margin-right: 10px;
 }

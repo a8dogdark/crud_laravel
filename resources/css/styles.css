@@ -6,19 +6,17 @@
     text-decoration: none;
     list-style-type: none;
     box-sizing: border-box;
-}
-body,
-input,
-textarea,
-button{
     font-family: "Space Grotesk", sans-serif;
 }
 :root{
     --color-azul: #0a47fe;
+    --color-azul-oscuro: #051265;
     --color-rojo: red;
     --color-blanco: white;
     --color-negro: #222;
     --color-verde: #10ae22;
+    --color-gris-oscuro: #1f2937;
+    --color-gris-oscuro-claro: #243145;
 }
 .texto__azul{
     color: var(--color-azul) !important;

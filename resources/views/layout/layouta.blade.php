@@ -12,78 +12,66 @@
     @vite(['resources/css/app.css'])
 </head>
 <body>
-    <input type="checkbox" id="sidebar-toogle">
     <div class="sidebar__admin">
-        <div class="sidebar__admin__header">
-            <h3>
-                <span class="bx bx-unlink"></span>
-                <span>DOGDARK</span>
-            </h3>
-            <label for="sidebar-toogle" class="bx bx-menu"></label>
+        <div class="logo__details">
+            <i class='bx bxl-c-plus-plus'></i>
+            <span class="logo__name">DOGDARK</span>
         </div>
-
-        <div class="sidebar__admin__menu">
-            <ul>
-                <li>
-                    <a href="#" title="Pagina de inicio">
-                        <span class="bx bxs-home"></span>
-                        <span>Home</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" title="Artículos">
-                        <span class="bx bxs-bookmarks"></span>
-                        <span>Artículos</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" title="Categorías">
-                        <span class="bx bx-category"></span>
-                        <span>Categorías</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" title="Comentarios">
-                        <span class="bx bxs-chat"></span>
-                        <span>Comentarios</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" title="Usuarios">
-                        <span class="bx bxs-user"></span>
-                        <span>Usuarios</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" title="Roles">
-                        <span class="bx bxs-universal-access"></span>
-                        <span>Roles</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <ul class="nav__links">
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link__name">Panel de Control</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-bookmarks'></i>
+                    <span class="link__name">Artículos</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-category'></i>
+                    <span class="link__name">Categorías</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-message-alt-detail'></i>
+                    <span class="link__name">Comentarios</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-user-account'></i>
+                    <span class="link__name">Usuarios</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-objects-vertical-center'></i>
+                    <span class="link__name">Roles</span>
+                </a>
+            </li>
+        </ul>
     </div>
 
-    <div class="main-admin">
-        <header class="main-admin-header">
-            <div class="search-admin">
-                <span class="bx bx-search"></span>
-                <input type="search" placeholder="Search">
+    <section class="section__home">
+        <nav>
+            <div class="sidebar__button">
+                <i class='bx bx-menu'></i>
+                <span class="sidebar__dashboard">Dashboard</span>
             </div>
-        </header>
 
-        <main>
-            <div>
-                @yield('contentadmin')
+            <div class="sidebar__profile__details">
+                <i class='bx bxs-user-circle'></i>
+                <span class="sidebar__admin__name">Admin Name</span>
+                <i class='bx bxs-chevron-down'></i>
             </div>
-        </main>
-    </div>
-    
-    
+        </nav>
+    </section>
+
+    @yield('contentadmin')
 </body>
 </html>
