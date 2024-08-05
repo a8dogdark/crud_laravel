@@ -15,6 +15,7 @@
     --color-blanco: white;
     --color-negro: #222;
     --color-verde: #10ae22;
+    --color-verde-oscuro: #136c25;
     --color-gris-oscuro: #1f2937;
     --color-gris-oscuro-claro: #28374e;
 }
@@ -24,7 +25,65 @@
 .texto__rojo{
     color: var(--color-rojo);
 }
-
+.texto__verde{
+    color: var(--color-verde-oscuro);
+}
 .text-justify{
     text-align: justify;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table,th, td{
+    text-align: left;
+    border: 1px solid #222;
+    padding: .4rem;
+}
+
+.table th{
+    background-color: var(--color-gris-oscuro);
+    color: var(--color-blanco);
+}
+
+.btn__verde,
+.btn__rojo{
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn__verde{
+    background-color: var(--color-verde-oscuro);
+    color: var(--color-blanco);
+}
+.btn__rojo{
+    background-color: var(--color-rojo);
+    color: var(--color-blanco);
+}
+.mbot-1{
+    margin-bottom: 1rem;
+}
+.mbot-2{
+    margin-bottom: 2rem;
+}
+.pagination{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+}
+.pagination li{
+    display: inline;
+    background-color: var(--color-azul-oscuro);
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    align-items: center;
+}
+.pagination li a{
+    color: var(--color-blanco);
 }
