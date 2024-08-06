@@ -2,7 +2,7 @@
 @section('titleadmin','Artículos Publicados')
 @section('contentadmin')
     <div class="mbot-1">
-        <h2 class="fnt__mayu">Artículos <a href="#" class="btn__verde fnt__1">Nuevo</a></h2>
+        <h2 class="fnt__mayu">Artículos <a href="{{ route('anarticulos') }}" class="btn__verde fnt__1">Nuevo</a></h2>
     </div>
     <div>
         <table class="table mbot-1">

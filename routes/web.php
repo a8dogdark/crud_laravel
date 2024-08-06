@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/admin/narticulo', function () {
+    return view('admin.anarticulos');
+})->name('anarticulos');
+
 Route::get('/admin/roles', function () {
     return view('admin.aroles');
 })->name('aroles');
