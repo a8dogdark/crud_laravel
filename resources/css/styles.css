@@ -19,18 +19,38 @@
     --color-gris-oscuro: #1f2937;
     --color-gris-oscuro-claro: #28374e;
 }
-.texto__azul{
+
+/* colore de texto */
+.fnt__azul{
     color: var(--color-azul) !important;
 }
-.texto__rojo{
+.fnt__rojo{
     color: var(--color-rojo);
 }
-.texto__verde{
+.fnt__verde{
     color: var(--color-verde-oscuro);
 }
+.fnt__blanco{
+    color: var(--color-blanco);
+}
+.fnt__bold{
+    font-weight: bold;
+}
+.fnt__mayu{
+    text-transform: uppercase;
+}
+.fnt__1{
+    font-size: 1rem;
+}
+/* estilos a los textos */
 .text-justify{
     text-align: justify;
 }
+/* estilos colores de fondo */
+.bg__gris{
+    background-color: var(--color-gris-oscuro);
+}
+/* estilo tablas */
 .table{
     width: 100%;
     border-collapse: collapse;
@@ -41,12 +61,12 @@
     border: 1px solid #222;
     padding: .4rem;
 }
-
+/*
 .table th{
     background-color: var(--color-gris-oscuro);
     color: var(--color-blanco);
 }
-
+*/
 .btn__verde,
 .btn__rojo{
     padding: 0.5rem;

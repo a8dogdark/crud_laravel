@@ -22,6 +22,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{ route('aprincipal') }}" class="sidebar__menu_link" title="Configuración del Sitio">
+                        <i class='bx bxs-wrench'></i>
+                        <span class="sidebar__menu__title">Configuración</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('aarticulos') }}" class="sidebar__menu_link" title="Artículos Publicados">
                         <i class='bx bxs-bookmarks'></i>
                         <span class="sidebar__menu__title">Artículos</span>

@@ -2,20 +2,24 @@
 @section('titleadmin','Artículos Publicados')
 @section('contentadmin')
     <div class="mbot-1">
-        <h2>Artículos</h2>
+        <h2 class="fnt__mayu">Artículos <a href="#" class="btn__verde fnt__1">Nuevo</a></h2>
     </div>
     <div>
         <table class="table mbot-1">
-            <tr>
+            <tr class="bg__gris fnt__blanco fnt__bold">
                 <th>ID</th>
                 <th>TITLE</th>
+                <th>ESTADO</th>
+                <th>CATEGORIA</th>
                 <th>ACCION</th>
             </tr>
 
             @for ($i=0;$i<5;$i++)
                 <tr>
-                    <td>00</td>
+                    <td class="fnt__bold">00</td>
                     <td>NUEVO ARTICULO</td>
+                    <td>PUBLICO</td>
+                    <td>GENERAL</td>
                     <td>
                         <a href="#">
                             <i class='bx bxs-edit-alt btn__verde'></i>
